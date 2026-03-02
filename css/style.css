@@ -36,6 +36,8 @@ body {
 }
 
 .hero {
+  background-image: url("/img/banner-img1.png");
+  background-position: center;
   background-color: #2f6f4f;
   height: 70vh;
   display: flex;
