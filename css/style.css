@@ -1,141 +1,300 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ======================================================
+   INDEX.HTML STYLING
+   ====================================================== */
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #e6f2ea;
-  color: #1f3d2b;
-}
-
-.header {
-  background-color: #1f5d3a;
-  color: white;
-  padding: 1.2rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.nav a {
-  color: white;
-  margin-left: 1.2rem;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  color: #c9b37e;
-}
-
-.hero {
-  background-image: url("/img/banner-img1.png");
-  background-position: center;
-  background-color: #2f6f4f;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  background-color: rgba(0,0,0,0.45);
-  padding: 3rem;
-  border-radius: 10px;
-  color: white;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero button {
-  margin-top: 1.5rem;
-  padding: 0.8rem 2rem;
-  background-color: #c9b37e;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.hero button:hover {
-  background-color: #b39e63;
-}
-
-main {
-  padding: 3rem 2rem;
-}
-
-.info-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.card h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0.5rem;
-}
-
-.card a {
-  color: #1f5d3a;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.news h2 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 2rem;
-}
-
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.news-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.image-placeholder {
-  background-image: linear-gradient(
-    rgba(0,0,0,0.1),
-    rgba(0,0,0,0.1)
-  );
-}
-
-.footer {
-  background-color: #1f5d3a;
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.footer h4 {
-  margin-bottom: 0.5rem;
-  font-family: 'Playfair Display', serif;
-}
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e6f2ea;
+    color: #1f3d2b;
+  }
+  
+  /* HEADER & NAV */
+  .header {
+    background-color: #1f5d3a;
+    color: white;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .nav a {
+    color: white;
+    margin-left: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav a:hover {
+    color: #c9b37e;
+  }
+  
+  /* HERO */
+  .hero {
+    background-image: url("/img/banner-img1.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #2f6f4f;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background-color: rgba(0,0,0,0.45);
+    padding: 3rem;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #c9b37e;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .hero-content button:hover {
+    background-color: #b39e63;
+  }
+  
+  /* MAIN CONTENT */
+  main {
+    padding: 3rem 2rem;
+  }
+  
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card a {
+    color: #1f5d3a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* NEWS */
+  .news h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .news-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .image-placeholder {
+    background-image: linear-gradient(
+      rgba(0,0,0,0.1),
+      rgba(0,0,0,0.1)
+    );
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: #1f5d3a;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .footer h4 {
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* ======================================================
+     MEDLEMSKAP.HTML STYLING
+     ====================================================== */
+  
+  /* Hero på medlemskap */
+  .membership-hero {
+    background-image: url("/img/banner-img1.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #2f6f4f;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .membership-hero .hero-text {
+    background-color: rgba(0,0,0,0.45);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+  }
+  
+  .membership-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+  }
+  
+  .membership-hero button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #c9b37e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .membership-hero button:hover {
+    background-color: #b39e63;
+  }
+  
+  /* Membership cards */
+  .membership-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+  
+  .membership-main .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .membership-main .card h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .membership-main .card .price {
+    font-weight: bold;
+    color: #1f5d3a;
+    margin: 1rem 0;
+  }
+  
+  .membership-main .card button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #1f5d3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .membership-main .card button:hover {
+    background-color: #2f6f4f;
+  }
+  
+  /* Benefits section */
+  .membership-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .membership-benefits .benefit {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .membership-benefits h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* CTA section */
+  .membership-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2f6f4f;
+    color: white;
+  }
+  
+  .membership-cta h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+  }
+  
+  .membership-cta button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #c9b37e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .membership-cta button:hover {
+    background-color: #b39e63;
+  }
+  
+  /* ======================================================
+     RESPONSIV DESIGN
+     ====================================================== */
+  
+  @media (max-width:768px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    main, .membership-main {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  }
