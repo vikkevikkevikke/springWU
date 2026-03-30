@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Banan - Ale Golfklubb</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banan - Ale Golfklubb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="logo">ALE GOLFKLUBB</div>
   <nav class="nav">
@@ -23,67 +27,128 @@
 <section class="course-hero">
   <div class="hero-content">
     <h1>Banan</h1>
-    <p>Utforska vår golfbana</p>
-    <span>18 hål i Ale’s natursköna landskap</span>
+    <p class="subtitle">Utforska Vår Golfbana</p>
+    <span class="tagline">18 hål i Ale's natursköna landskap</span>
   </div>
 </section>
 
-<!-- OM BANAN -->
+<!-- OM GOLFBANAN -->
 <section class="course-info">
-  <h2>Om Golfbanan</h2>
-  <p>En hel golfrunda i Ale’s natursköna landskap väntar!</p>
-
-  <div class="course-grid">
-    <div class="info-box">
-      <h3>18 Hål</h3>
-      <p>En omväxlande bana med utmanande och roliga hål.</p>
-    </div>
-
-    <div class="info-box">
-      <h3>Naturskönt</h3>
-      <p>Vackra vyer med skogar, sjöar och böljande landskap.</p>
-    </div>
-
-    <div class="info-box">
-      <h3>Faciliteter</h3>
-      <p>Driving range, övningsområde, klubbhus och restaurang.</p>
-    </div>
+  <div class="course-info-header">
+    <h2>Om Golfbanan</h2>
+    <p>En hel golfrunda i Ale's natursköna landskap väntar!</p>
   </div>
 
-  <button class="course-btn">Se banöversikt</button>
+  <div class="course-info-body">
+
+    <!-- Vänster: features + knapp -->
+    <div>
+      <div class="course-features">
+        <div class="feature-item">
+          <div class="feature-icon-label">
+            <span class="icon">📋</span>
+            <span>18 Hål</span>
+          </div>
+          <p>En omväxlande bana med utmanande och roliga hål.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-label">
+            <span class="icon">🏔️</span>
+            <span>Naturskönt</span>
+          </div>
+          <p>Vackra vyer med skogar, sjöar och böljande landskap.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-label">
+            <span class="icon">⛳</span>
+            <span>Faciliteter</span>
+          </div>
+          <p>Driving range, övningsområde, klubbhus och restaurang.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-label">
+            <span class="icon">🏌️</span>
+            <span>Pro Shop</span>
+          </div>
+          <p>Driving range, övningsområde, klubbhus och restaurang.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="#" class="course-btn">Se banöversikt</a>
+      </div>
+    </div>
+
+    <!-- Höger: stor bild -->
+    <div class="course-image-block">
+      <img src="/img/Lysegardens_GK_1.jpg" alt="Golfbana vy"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <div class="img-placeholder"></div>
+    </div>
+
+  </div>
+
+  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
 </section>
 
 <!-- FAVORITHÅL -->
-<section class="holes">
-  <h2>Våra Favorithål</h2>
+<section class="holes-bg">
+  <div class="holes-header">
+    <h2>Våra Favorithål</h2>
+    <p>Se de bästa hålen på vår natursköna golfbana!</p>
+  </div>
 
   <div class="holes-grid">
+
     <div class="hole-card">
       <div class="hole-img"></div>
-      <div class="hole-info">
-        <h3>Par 5 · 496 m</h3>
-        <p>"Pond Challenge"</p>
+      <div class="hole-overlay">
+        <div class="hole-par-line">
+          <span class="flag-icon">⛳</span>
+          <span>Par 5</span>
+          <span class="dot">·</span>
+          <span>496 m</span>
+        </div>
+        <div class="hole-name">"Pond Challenge"</div>
+        <p class="hole-desc">Kräver precision, spel över en stor damm.</p>
       </div>
     </div>
 
     <div class="hole-card">
       <div class="hole-img"></div>
-      <div class="hole-info">
-        <h3>Par 3 · 158 m</h3>
-        <p>"Island Shot"</p>
+      <div class="hole-overlay">
+        <div class="hole-par-line">
+          <span class="flag-icon">⛳</span>
+          <span>Par 3</span>
+          <span class="dot">·</span>
+          <span>158 m</span>
+        </div>
+        <div class="hole-name">"Island Shot"</div>
+        <p class="hole-desc">Ett par 3 där greenen ligger på en ö.</p>
       </div>
     </div>
 
     <div class="hole-card">
       <div class="hole-img"></div>
-      <div class="hole-info">
-        <h3>Par 4 · 365 m</h3>
-        <p>"Forest Edge"</p>
+      <div class="hole-overlay">
+        <div class="hole-par-line">
+          <span class="flag-icon">⛳</span>
+          <span>Par 4</span>
+          <span class="dot">·</span>
+          <span>365 m</span>
+        </div>
+        <div class="hole-name">"Forest Edge"</div>
+        <p class="hole-desc">Följer skogslinjen och kräver stor precision.</p>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div>
     <h4>Kontakt</h4>
@@ -91,12 +156,10 @@
     <p>Alevägen 120, Älvängen</p>
     <p>Tel: 000-123 456</p>
   </div>
-
   <div>
     <h4>Följ oss</h4>
     <p>Facebook | Instagram</p>
   </div>
-
   <div>
     <h4>Öppettider</h4>
     <p>Mån–Fre: 08:00–18:00</p>
