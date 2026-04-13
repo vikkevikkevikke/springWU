@@ -4,96 +4,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ale Golfklubb</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="logo">ALE GOLFKLUBB</div>
   <nav class="nav">
-    <a href="index.html">Hem</a>
+    <a href="index.html" class="active">Hem</a>
     <a href="banor.html">Banan</a>
     <a href="medlemskap.html">Medlemskap</a>
-    <a href="#">Nyheter</a>
+    <a href="nyheter.html">Nyheter</a>
     <a href="#">Kontakt</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Välkommen till Ale Golfklubb</h1>
-    <p>Golf i naturskön miljö i hjärtat av Ale</p>
-    <button>Boka Starttid</button>
+<!-- HERO — bottom-left aligned, diagonal gradient -->
+<section class="home-hero">
+  <div class="home-hero-content">
+    <p class="home-hero-eyebrow">Ale · Västra Götaland</p>
+    <h1>Golf i hjärtat av naturen</h1>
+    <p>Upplev 18 utmanande hål omgivna av skog, sjöar och böljande landskap i Ale's vackra natur.</p>
+    <div class="home-hero-btns">
+      <a href="#" class="btn-primary">Boka Starttid</a>
+      <a href="banor.html" class="btn-outline">Utforska Banan</a>
+    </div>
   </div>
 </section>
 
-<main>
+<!-- STATS BAR -->
+<div class="home-stats">
+  <div class="stat-item">
+    <div class="stat-number">18</div>
+    <div class="stat-label">Hål</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">1962</div>
+    <div class="stat-label">Grundades</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">600+</div>
+    <div class="stat-label">Medlemmar</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">Par 72</div>
+    <div class="stat-label">Banbeteckning</div>
+  </div>
+</div>
 
-  <section class="info-cards">
-    <article class="card image-placeholder">
-      <h2>Om Klubben</h2>
-      <p>Upptäck vår gemenskap och anläggning med hög kvalitet.</p>
-      <a href="#">Läs mer →</a>
-    </article>
+<!-- INTRO SPLIT — text left, image right -->
+<section class="home-intro">
+  <div class="home-intro-text">
+    <p class="section-eyebrow">Om Klubben</p>
+    <h2>En golfupplevelse utöver det vanliga</h2>
+    <p>Ale Golfklubb erbjuder en omväxlande och välskött 18-hålsbana i ett av Västsveriges vackraste naturområden. Här spelar du golf omgiven av skog, sjöar och böljande åkermark.</p>
+    <p>Oavsett om du är nybörjare eller erfaren spelare hittar du utmaningar och glädje på vår bana. Vi värnar om en välkomnande och inkluderande golfmiljö för alla.</p>
+    <a href="banor.html" class="btn-green">Läs mer om banan →</a>
+  </div>
+  <div class="home-intro-image"></div>
+</section>
 
-    <article class="card image-placeholder">
-      <h2>Våra Hål</h2>
-      <p>18 utmanande hål i vacker natur.</p>
-      <a href="#">Utforska banan →</a>
-    </article>
+<!-- QUICK LINKS -->
+<section class="home-quicklinks">
+  <h2>Vad söker du?</h2>
+  <p class="section-sub">Allt du behöver för en bra golfdag på ett ställe.</p>
 
-    <article class="card image-placeholder">
-      <h2>Medlemskap</h2>
-      <p>Bli medlem och ta del av våra förmåner.</p>
-      <a href="#">Läs om medlemskap →</a>
-    </article>
-  </section>
+  <div class="quicklinks-grid">
+    <a href="banor.html" class="quicklink-card">
+      <div class="quicklink-img" style="background-image: url('/img/Lysegardens_GK_1.jpg');"></div>
+      <div class="quicklink-body">
+        <h3>Banan</h3>
+        <p>18 hål i natursköna Ale. Se hålbeskrivningar, banöversikt och svårighetsgrad.</p>
+        <span class="quicklink-arrow">Utforska banan →</span>
+      </div>
+    </a>
 
-  <section class="news">
-    <h2>Senaste Nyheter</h2>
+    <a href="medlemskap.html" class="quicklink-card">
+      <div class="quicklink-img" style="background-color: #2a5c3f;"></div>
+      <div class="quicklink-body">
+        <h3>Medlemskap</h3>
+        <p>Bli en del av gemenskapen. Vi erbjuder medlemskap för junior, senior och familj.</p>
+        <span class="quicklink-arrow">Se priser →</span>
+      </div>
+    </a>
 
-    <div class="news-grid">
-      <article class="news-card image-placeholder">
-        <h3>Tävling till helgen</h3>
-        <p>Anmäl dig till helgens tävling redan idag.</p>
-        <a href="#">Läs mer</a>
-      </article>
+    <a href="nyheter.html" class="quicklink-card">
+      <div class="quicklink-img" style="background-color: #1a3d28;"></div>
+      <div class="quicklink-body">
+        <h3>Nyheter & Tävlingar</h3>
+        <p>Håll dig uppdaterad med klubbens senaste nyheter, tävlingar och evenemang.</p>
+        <span class="quicklink-arrow">Läs nyheter →</span>
+      </div>
+    </a>
+  </div>
+</section>
 
-      <article class="news-card image-placeholder">
-        <h3>Nybörjarkurs startar</h3>
-        <p>Perfekt för dig som vill börja spela golf.</p>
-        <a href="#">Läs mer</a>
-      </article>
+<!-- NEWS STRIP -->
+<section class="home-news-strip">
+  <h2>Senaste Nyheter</h2>
 
-      <article class="news-card image-placeholder">
-        <h3>Vårerbjudande</h3>
-        <p>Ta del av våra rabatter inför säsongen.</p>
-        <a href="#">Läs mer</a>
-      </article>
+  <div class="news-strip-grid">
+    <div class="news-strip-card">
+      <p class="news-strip-tag">Tävling</p>
+      <h3>Vårtävlingen 2026 – Anmäl dig nu</h3>
+      <p>Årets första stora tävling är här. Anmäl dig och tävla mot klubbens bästa spelare.</p>
     </div>
-  </section>
+    <div class="news-strip-card">
+      <p class="news-strip-tag">Kurs</p>
+      <h3>Nybörjarkurs startar i april</h3>
+      <p>Har du alltid velat prova golf? Vår populära nybörjarkurs har öppna platser kvar.</p>
+    </div>
+    <div class="news-strip-card">
+      <p class="news-strip-tag">Klubbinfo</p>
+      <h3>Banan öppen från 1 april</h3>
+      <p>Vintervilan är över! Banan är nu öppen för spel och i utmärkt skick efter vinterunderhållet.</p>
+    </div>
+  </div>
 
-</main>
+  <div class="center-link">
+    <a href="nyheter.html">Se alla nyheter →</a>
+  </div>
+</section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div>
     <h4>Kontakt</h4>
-    <p>Ale Golfklubb</p>
-    <p>Alevägen 120, Älvängen</p>
-    <p>Tel: 000-123 456</p>
+    <p>Ale Golfklubb<br>
+       Alevägen 120, Älvängen<br>
+       Tel: 000-123 456</p>
   </div>
-
   <div>
     <h4>Följ oss</h4>
-    <p>Facebook | Instagram</p>
+    <p>Facebook<br>Instagram</p>
   </div>
-
   <div>
     <h4>Öppettider</h4>
-    <p>Mån–Fre: 08:00–18:00</p>
-    <p>Lör–Sön: 08:00–17:00</p>
+    <p>Mån–Fre: 08:00–18:00<br>
+       Lör–Sön: 08:00–17:00</p>
   </div>
 </footer>
 
