@@ -1,14 +1,10 @@
 /* ============================================================
-   GLOBALT / DELADE STILAR
+   IMPORT & RESET
    ============================================================ */
 
    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap');
 
-   *, *::before, *::after {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-   }
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
    
    body {
      font-family: 'Open Sans', sans-serif;
@@ -16,9 +12,199 @@
      color: #1f3d2b;
    }
    
+   
+   /* ============================================================
+      DELADE VERKTYG — knappar, hero-bas, kort, typografi
+      ============================================================ */
+   
+   .eyebrow {
+     display: block;
+     font-size: 0.75rem;
+     font-weight: 600;
+     letter-spacing: 0.22em;
+     text-transform: uppercase;
+     color: #c9b37e;
+     margin-bottom: 1rem;
+   }
+   
+   /* Knappar */
+   .btn {
+     display: inline-block;
+     padding: 0.8rem 2rem;
+     border: none;
+     border-radius: 6px;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 0.95rem;
+     font-weight: 600;
+     cursor: pointer;
+     text-decoration: none;
+     transition: background 0.2s, transform 0.15s;
+   }
+   
+   .btn-gold  { background: #c9b37e; color: #1a2e1a; }
+   .btn-gold:hover  { background: #b39e63; transform: translateY(-2px); }
+   
+   .btn-dark  { background: #1f5d3a; color: white; }
+   .btn-dark:hover  { background: #174c2f; }
+   
+   .btn-ghost {
+     background: transparent;
+     color: white;
+     border: 2px solid rgba(255,255,255,0.6);
+   }
+   .btn-ghost:hover { border-color: #c9b37e; color: #c9b37e; }
+   
+   /* Hero-bas — gemensam overlay för alla hero-sektioner */
+   .hero-base {
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     position: relative;
+     color: white;
+   }
+   
+   .hero-base::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: rgba(10,28,18,0.58);
+   }
+   
+   .hero-base > * { position: relative; z-index: 1; }
+   
+   .hero-base h1 {
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+     margin-bottom: 0.8rem;
+   }
+   
+   /* Guld-avdelare */
+   .gold-line {
+     width: 60px;
+     height: 3px;
+     background: #c9b37e;
+     margin: 1rem auto;
+     border-radius: 2px;
+   }
+   
+   /* Kortgrid — 3 kolumner, används på index och nyheter */
+   .card-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1.5rem;
+     max-width: 1100px;
+     margin: 0 auto;
+   }
+   
+   /* Vitt kort */
+   .card-white {
+     background: white;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+     transition: transform 0.22s, box-shadow 0.22s;
+     text-decoration: none;
+     color: inherit;
+     display: block;
+   }
+   
+   .card-white:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+   }
+   
+   .card-img {
+     height: 190px;
+     background-color: #2a5c3f;
+     background-size: cover;
+     background-position: center;
+   }
+   
+   .card-body { padding: 1.4rem 1.5rem 1.6rem; }
+   
+   .card-body h3 {
+     font-family: 'Playfair Display', serif;
+     font-size: 1.1rem;
+     margin-bottom: 0.5rem;
+     color: #1f3d2b;
+     line-height: 1.35;
+   }
+   
+   .card-body p { font-size: 0.85rem; color: #4a6358; line-height: 1.6; }
+   
+   /* Glasskort — membership-planer */
+   .card-glass {
+     background: rgba(255,255,255,0.10);
+     backdrop-filter: blur(12px);
+     border: 1px solid rgba(255,255,255,0.18);
+     border-radius: 14px;
+     padding: 2.5rem 2rem;
+     color: white;
+     text-align: center;
+     transition: transform 0.25s, background 0.25s;
+     position: relative;
+   }
+   
+   .card-glass:hover { transform: translateY(-8px); background: rgba(255,255,255,0.16); }
+   .card-glass.featured { background: rgba(201,179,126,0.18); border-color: #c9b37e; }
+   
+   /* Mörkt kort — nyhets-strip */
+   .card-dark {
+     background: rgba(255,255,255,0.07);
+     border: 1px solid rgba(255,255,255,0.12);
+     border-radius: 10px;
+     padding: 1.6rem;
+     color: white;
+     transition: background 0.2s;
+   }
+   
+   .card-dark:hover { background: rgba(255,255,255,0.12); }
+   
+   /* Nyhets-etiketter */
+   .news-tag {
+     display: inline-block;
+     font-size: 0.68rem;
+     font-weight: 700;
+     letter-spacing: 0.12em;
+     text-transform: uppercase;
+     color: #1f5d3a;
+     background: #e6f2ea;
+     border-radius: 4px;
+     padding: 0.2rem 0.6rem;
+     margin-bottom: 0.7rem;
+   }
+   
+   .news-date { display: block; font-size: 0.78rem; color: #8a9e6e; margin-bottom: 0.5rem; }
+   
+   .news-strip-tag {
+     font-size: 0.7rem;
+     text-transform: uppercase;
+     letter-spacing: 0.15em;
+     color: #c9b37e;
+     margin-bottom: 0.5rem;
+   }
+   
+   .center-link { text-align: center; }
+   .center-link a {
+     color: #c9b37e;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 0.9rem;
+     border-bottom: 1px solid #c9b37e;
+     padding-bottom: 2px;
+   }
+   
+   
+   /* ============================================================
+      HEADER & FOOTER
+      ============================================================ */
+   
    .header {
      background-color: #1a3d28;
-     color: white;
      padding: 1.1rem 2.5rem;
      display: flex;
      justify-content: space-between;
@@ -37,12 +223,6 @@
      color: white;
    }
    
-   .nav {
-     display: flex;
-     align-items: center;
-     gap: 0;
-   }
-   
    .nav a {
      color: rgba(255,255,255,0.82);
      padding: 0.35rem 1rem;
@@ -53,40 +233,31 @@
    }
    
    .nav a:hover { color: #c9b37e; }
-   
-   .nav a.active {
-     color: white;
-     border-bottom: 2px solid #c9b37e;
-   }
+   .nav a.active { color: white; border-bottom: 2px solid #c9b37e; }
    
    .footer {
      background-color: #1a3d28;
      color: white;
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-     padding: 2.5rem 2.5rem;
+     padding: 2.5rem;
      gap: 2rem;
    }
    
    .footer h4 {
-     margin-bottom: 0.8rem;
      font-family: 'Playfair Display', serif;
      font-size: 1rem;
      color: #c9b37e;
+     margin-bottom: 0.8rem;
    }
    
-   .footer p {
-     font-size: 0.88rem;
-     line-height: 1.75;
-     opacity: 0.8;
-   }
+   .footer p { font-size: 0.88rem; line-height: 1.75; opacity: 0.8; }
    
    
    /* ============================================================
       HEM (index.html)
       ============================================================ */
    
-   /* HERO */
    .home-hero {
      height: 90vh;
      min-height: 560px;
@@ -103,8 +274,7 @@
      content: "";
      position: absolute;
      inset: 0;
-     background: linear-gradient(
-       135deg,
+     background: linear-gradient(135deg,
        rgba(10,30,15,0.82) 0%,
        rgba(10,30,15,0.30) 55%,
        rgba(10,30,15,0.10) 100%
@@ -119,15 +289,6 @@
      color: white;
    }
    
-   .home-hero-eyebrow {
-     font-size: 0.78rem;
-     font-weight: 600;
-     letter-spacing: 0.22em;
-     text-transform: uppercase;
-     color: #c9b37e;
-     margin-bottom: 1rem;
-   }
-   
    .home-hero-content h1 {
      font-family: 'Playfair Display', serif;
      font-size: 4rem;
@@ -137,60 +298,10 @@
      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
    }
    
-   .home-hero-content p {
-     font-size: 1.05rem;
-     opacity: 0.88;
-     line-height: 1.65;
-     margin-bottom: 2rem;
-   }
+   .home-hero-content p { font-size: 1.05rem; opacity: 0.88; line-height: 1.65; margin-bottom: 2rem; }
    
-   .home-hero-btns {
-     display: flex;
-     gap: 1rem;
-     flex-wrap: wrap;
-   }
+   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
    
-   .btn-primary {
-     padding: 0.85rem 2rem;
-     background-color: #c9b37e;
-     color: #1a2e1a;
-     border: none;
-     border-radius: 6px;
-     font-size: 0.95rem;
-     font-weight: 600;
-     font-family: 'Open Sans', sans-serif;
-     cursor: pointer;
-     text-decoration: none;
-     transition: background 0.2s, transform 0.15s;
-     display: inline-block;
-   }
-   
-   .btn-primary:hover {
-     background-color: #b39e63;
-     transform: translateY(-2px);
-   }
-   
-   .btn-outline {
-     padding: 0.85rem 2rem;
-     background: transparent;
-     color: white;
-     border: 2px solid rgba(255,255,255,0.6);
-     border-radius: 6px;
-     font-size: 0.95rem;
-     font-weight: 600;
-     font-family: 'Open Sans', sans-serif;
-     cursor: pointer;
-     text-decoration: none;
-     transition: border-color 0.2s, color 0.2s;
-     display: inline-block;
-   }
-   
-   .btn-outline:hover {
-     border-color: #c9b37e;
-     color: #c9b37e;
-   }
-   
-   /* STATS BAR */
    .home-stats {
      background-color: #1a3d28;
      display: grid;
@@ -203,7 +314,6 @@
      border-right: 1px solid rgba(255,255,255,0.1);
      color: white;
    }
-   
    .stat-item:last-child { border-right: none; }
    
    .stat-number {
@@ -215,19 +325,9 @@
      margin-bottom: 0.3rem;
    }
    
-   .stat-label {
-     font-size: 0.75rem;
-     text-transform: uppercase;
-     letter-spacing: 0.12em;
-     opacity: 0.6;
-   }
+   .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6; }
    
-   /* INTRO SPLIT */
-   .home-intro {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     min-height: 500px;
-   }
+   .home-intro { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
    
    .home-intro-text {
      background-color: #f5f0e8;
@@ -237,14 +337,7 @@
      justify-content: center;
    }
    
-   .section-eyebrow {
-     font-size: 0.75rem;
-     font-weight: 600;
-     letter-spacing: 0.2em;
-     text-transform: uppercase;
-     color: #8a9e6e;
-     margin-bottom: 0.8rem;
-   }
+   .home-intro-text .eyebrow { color: #8a9e6e; }
    
    .home-intro-text h2 {
      font-family: 'Playfair Display', serif;
@@ -254,54 +347,13 @@
      line-height: 1.25;
    }
    
-   .home-intro-text p {
-     color: #4a6358;
-     line-height: 1.8;
-     margin-bottom: 1rem;
-     font-size: 0.95rem;
-   }
-   
-   .btn-green {
-     display: inline-block;
-     padding: 0.75rem 1.8rem;
-     background-color: #1f5d3a;
-     color: white;
-     border-radius: 6px;
-     text-decoration: none;
-     font-weight: 600;
-     font-size: 0.9rem;
-     transition: background 0.2s;
-     margin-top: 0.5rem;
-   }
-   
-   .btn-green:hover { background-color: #174c2f; }
+   .home-intro-text p { color: #4a6358; line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
    
    .home-intro-image {
      background-image: url("/img/Lysegardens_GK_1.jpg");
      background-size: cover;
      background-position: center;
      min-height: 400px;
-   }
-   
-   /* QUICK LINKS */
-   .home-quicklinks {
-     padding: 4.5rem 2.5rem;
-     background-color: #e6f2ea;
-   }
-   
-   .home-quicklinks h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     text-align: center;
-     margin-bottom: 0.5rem;
-     color: #1f3d2b;
-   }
-   
-   .section-sub {
-     text-align: center;
-     color: #4a6358;
-     margin-bottom: 3rem;
-     font-size: 0.95rem;
    }
    
    .quicklinks-grid {
@@ -323,10 +375,7 @@
      display: block;
    }
    
-   .quicklink-card:hover {
-     transform: translateY(-6px);
-     box-shadow: 0 14px 36px rgba(0,0,0,0.13);
-   }
+   .quicklink-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(0,0,0,0.13); }
    
    .quicklink-img {
      height: 180px;
@@ -335,44 +384,10 @@
      background-color: #2a5c3f;
    }
    
-   .quicklink-body {
-     padding: 1.4rem 1.5rem 1.6rem;
-   }
-   
-   .quicklink-body h3 {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.2rem;
-     margin-bottom: 0.4rem;
-     color: #1f3d2b;
-   }
-   
-   .quicklink-body p {
-     font-size: 0.85rem;
-     color: #5a7060;
-     line-height: 1.55;
-   }
-   
-   .quicklink-arrow {
-     display: inline-block;
-     margin-top: 0.8rem;
-     font-size: 0.85rem;
-     font-weight: 600;
-     color: #1f5d3a;
-   }
-   
-   /* NEWS STRIP */
-   .home-news-strip {
-     background-color: #1a3d28;
-     padding: 4.5rem 2.5rem;
-   }
-   
-   .home-news-strip h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     color: white;
-     text-align: center;
-     margin-bottom: 2.5rem;
-   }
+   .quicklink-body { padding: 1.4rem 1.5rem 1.6rem; }
+   .quicklink-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.4rem; color: #1f3d2b; }
+   .quicklink-body p  { font-size: 0.85rem; color: #5a7060; line-height: 1.55; }
+   .quicklink-arrow   { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; font-weight: 600; color: #1f5d3a; }
    
    .news-strip-grid {
      display: grid;
@@ -382,50 +397,8 @@
      margin: 0 auto 2.5rem;
    }
    
-   .news-strip-card {
-     background: rgba(255,255,255,0.07);
-     border: 1px solid rgba(255,255,255,0.12);
-     border-radius: 10px;
-     padding: 1.6rem;
-     color: white;
-     transition: background 0.2s;
-   }
-   
-   .news-strip-card:hover { background: rgba(255,255,255,0.12); }
-   
-   .news-strip-tag {
-     font-size: 0.7rem;
-     text-transform: uppercase;
-     letter-spacing: 0.15em;
-     color: #c9b37e;
-     margin-bottom: 0.5rem;
-   }
-   
-   .news-strip-card h3 {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.05rem;
-     margin-bottom: 0.5rem;
-     line-height: 1.35;
-   }
-   
-   .news-strip-card p {
-     font-size: 0.83rem;
-     opacity: 0.72;
-     line-height: 1.55;
-   }
-   
-   .center-link {
-     text-align: center;
-   }
-   
-   .center-link a {
-     color: #c9b37e;
-     text-decoration: none;
-     font-weight: 600;
-     font-size: 0.9rem;
-     border-bottom: 1px solid #c9b37e;
-     padding-bottom: 2px;
-   }
+   .news-strip-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.5rem; line-height: 1.35; }
+   .news-strip-card p  { font-size: 0.83rem; opacity: 0.72; line-height: 1.55; }
    
    
    /* ============================================================
@@ -436,80 +409,11 @@
      height: 65vh;
      min-height: 440px;
      background-image: url("/img/banner-img1.png");
-     background-size: cover;
-     background-position: center 55%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     position: relative;
    }
    
-   .member-hero::before {
-     content: "";
-     position: absolute;
-     inset: 0;
-     background: linear-gradient(to bottom,
-       rgba(10,28,18,0.65) 0%,
-       rgba(10,28,18,0.35) 50%,
-       rgba(10,28,18,0.70) 100%
-     );
-   }
-   
-   .member-hero-content {
-     position: relative;
-     z-index: 1;
-     color: white;
-     max-width: 680px;
-     padding: 0 2rem;
-   }
-   
-   .eyebrow {
-     font-size: 0.75rem;
-     font-weight: 600;
-     letter-spacing: 0.22em;
-     text-transform: uppercase;
-     color: #c9b37e;
-     margin-bottom: 1rem;
-     display: block;
-   }
-   
-   .member-hero-content h1 {
-     font-family: 'Playfair Display', serif;
-     font-size: 3.2rem;
-     font-weight: 700;
-     line-height: 1.15;
-     margin-bottom: 1rem;
-     text-shadow: 0 2px 16px rgba(0,0,0,0.4);
-   }
-   
-   .member-hero-content p {
-     font-size: 1rem;
-     opacity: 0.88;
-     margin-bottom: 2rem;
-     line-height: 1.65;
-   }
-   
-   .member-intro {
-     background-color: #f5f0e8;
-     text-align: center;
-     padding: 4rem 2rem;
-   }
-   
-   .member-intro h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     margin-bottom: 0.8rem;
-     color: #1f3d2b;
-   }
-   
-   .member-intro p {
-     max-width: 580px;
-     margin: 0 auto;
-     color: #4a6358;
-     line-height: 1.8;
-     font-size: 0.95rem;
-   }
+   .member-hero-content { max-width: 680px; padding: 0 2rem; }
+   .member-hero-content h1 { font-size: 3.2rem; }
+   .member-hero-content p { font-size: 1rem; opacity: 0.88; margin-bottom: 2rem; line-height: 1.65; }
    
    .member-plans {
      background-image: url("/img/Lysegardens_GK_1.jpg");
@@ -519,23 +423,8 @@
      position: relative;
    }
    
-   .member-plans::before {
-     content: "";
-     position: absolute;
-     inset: 0;
-     background: rgba(10,28,18,0.68);
-   }
-   
+   .member-plans::before { content: ""; position: absolute; inset: 0; background: rgba(10,28,18,0.68); }
    .member-plans > * { position: relative; z-index: 1; }
-   
-   .member-plans h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     color: white;
-     text-align: center;
-     margin-bottom: 3rem;
-     text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-   }
    
    .plans-grid {
      display: grid;
@@ -545,107 +434,35 @@
      margin: 0 auto;
    }
    
-   .plan-card {
-     background: rgba(255,255,255,0.10);
-     backdrop-filter: blur(12px);
-     border: 1px solid rgba(255,255,255,0.18);
-     border-radius: 14px;
-     padding: 2.5rem 2rem;
-     color: white;
-     text-align: center;
-     transition: transform 0.25s, background 0.25s;
-     position: relative;
-   }
-   
-   .plan-card:hover {
-     transform: translateY(-8px);
-     background: rgba(255,255,255,0.16);
-   }
-   
-   .plan-icon {
-     font-size: 2.2rem;
-     margin-bottom: 1rem;
-   }
-   
-   .plan-card h3 {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.5rem;
-     margin-bottom: 0.5rem;
-   }
-   
-   .plan-card .plan-desc {
-     font-size: 0.83rem;
-     opacity: 0.72;
-     line-height: 1.55;
-     margin-bottom: 1.5rem;
-   }
-   
-   .plan-price {
-     font-family: 'Playfair Display', serif;
-     font-size: 2.4rem;
-     color: #c9b37e;
-   }
-   
-   .plan-price span {
-     font-size: 1rem;
-     font-weight: 400;
-     opacity: 0.7;
-   }
-   
-   .plan-card ul {
-     list-style: none;
-     margin: 1.5rem 0;
-     text-align: left;
-   }
-   
-   .plan-card ul li {
-     font-size: 0.85rem;
-     padding: 0.4rem 0;
-     border-bottom: 1px solid rgba(255,255,255,0.1);
-     opacity: 0.85;
-   }
-   
-   .btn-plan {
-     display: block;
-     margin-top: 1.5rem;
-     padding: 0.8rem 1.5rem;
-     background: #1f5d3a;
-     color: white;
-     border-radius: 8px;
-     font-family: 'Open Sans', sans-serif;
-     font-size: 0.9rem;
-     font-weight: 600;
-     cursor: pointer;
-     transition: background 0.2s;
-     text-decoration: none;
-     text-align: center;
-   }
-   
-   .plan-card.featured .btn-plan {
+   .plan-badge {
+     position: absolute;
+     top: -12px;
+     left: 50%;
+     transform: translateX(-50%);
      background: #c9b37e;
      color: #1a2e1a;
+     font-size: 0.72rem;
+     font-weight: 700;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     padding: 0.3rem 1rem;
+     border-radius: 20px;
    }
    
-   .btn-plan:hover { background: #174c2f; }
-   .plan-card.featured .btn-plan:hover { background: #b39e63; }
+   .plan-icon  { font-size: 2.2rem; margin-bottom: 1rem; }
+   .plan-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+   .plan-desc  { font-size: 0.83rem; opacity: 0.72; line-height: 1.55; margin-bottom: 1.5rem; }
    
-   .member-benefits {
-     padding: 5rem 2rem;
-     background-color: #e6f2ea;
-   }
+   .plan-price { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #c9b37e; }
+   .plan-price span { font-size: 1rem; font-weight: 400; opacity: 0.7; }
    
-   .member-benefits h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     text-align: center;
-     margin-bottom: 3.5rem;
-     color: #1f3d2b;
-   }
+   .plan-card ul { list-style: none; margin: 1.5rem 0; text-align: left; }
+   .plan-card ul li { font-size: 0.85rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); opacity: 0.85; }
+   .plan-card ul li::before { content: "✓ "; color: #c9b37e; font-weight: 700; }
    
    .benefit-row {
      display: grid;
      grid-template-columns: 1fr 1fr;
-     gap: 0;
      max-width: 1000px;
      margin: 0 auto 4px;
      border-radius: 12px;
@@ -656,104 +473,23 @@
    .benefit-row.reverse { direction: rtl; }
    .benefit-row.reverse > * { direction: ltr; }
    
-   .benefit-text {
-     background: white;
-     padding: 3rem;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-   }
+   .benefit-text { background: white; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+   .benefit-icon-large { font-size: 2rem; margin-bottom: 1rem; }
+   .benefit-text h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.7rem; color: #1f3d2b; }
+   .benefit-text p  { font-size: 0.9rem; color: #4a6358; line-height: 1.75; }
+   .benefit-img { min-height: 240px; background-size: cover; background-position: center; background-color: #2a5c3f; }
    
-   .benefit-icon-large {
-     font-size: 2rem;
-     margin-bottom: 1rem;
-   }
-   
-   .benefit-text h3 {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.4rem;
-     margin-bottom: 0.7rem;
-     color: #1f3d2b;
-   }
-   
-   .benefit-text p {
-     font-size: 0.9rem;
-     color: #4a6358;
-     line-height: 1.75;
-   }
-   
-   .benefit-img {
-     min-height: 240px;
-     background-size: cover;
-     background-position: center;
-     background-color: #2a5c3f;
-   }
-   
-   .member-cta {
-     background-color: #1a3d28;
-     text-align: center;
-     padding: 5rem 2rem;
-     color: white;
-     position: relative;
-     overflow: hidden;
-   }
-   
-   .member-cta h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2.5rem;
-     margin-bottom: 1rem;
-     position: relative;
-   }
-   
-   .member-cta p {
-     opacity: 0.8;
-     margin-bottom: 2rem;
-     font-size: 1rem;
-     position: relative;
-   }
+   .member-cta { text-align: center; padding: 5rem 2rem; position: relative; overflow: hidden; }
+   .member-cta h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+   .member-cta p  { opacity: 0.8; margin-bottom: 2rem; font-size: 1rem; }
    
    
    /* ============================================================
       NYHETER (nyheter.html)
       ============================================================ */
    
-   .news-hero {
-     height: 55vh;
-     min-height: 380px;
-     background-image: url("/img/banner-img1.png");
-     background-size: cover;
-     background-position: center 35%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     position: relative;
-   }
-   
-   .news-hero::before {
-     content: "";
-     position: absolute;
-     inset: 0;
-     background: rgba(10,28,18,0.60);
-   }
-   
-   .news-hero-content {
-     position: relative;
-     z-index: 1;
-     color: white;
-   }
-   
-   .news-hero-content h1 {
-     font-family: 'Playfair Display', serif;
-     font-size: 3.2rem;
-     font-weight: 700;
-     text-shadow: 0 2px 16px rgba(0,0,0,0.4);
-   }
-   
-   .news-featured {
-     background-color: #f5f0e8;
-     padding: 4rem 2.5rem;
-   }
+   .news-hero { height: 55vh; min-height: 380px; background-image: url("/img/banner-img1.png"); }
+   .news-hero h1 { font-size: 3.2rem; }
    
    .news-featured-inner {
      max-width: 1100px;
@@ -767,7 +503,6 @@
    .news-featured-img {
      height: 400px;
      border-radius: 12px;
-     overflow: hidden;
      background-color: #2a5c3f;
      background-image: url("/img/banner-img1.png");
      background-size: cover;
@@ -775,32 +510,8 @@
      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
    }
    
-   .news-featured-text h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     color: #1f3d2b;
-     margin-bottom: 1rem;
-     line-height: 1.3;
-   }
-   
-   .news-date {
-     font-size: 0.8rem;
-     color: #8a9e6e;
-     margin-bottom: 1rem;
-     display: block;
-   }
-   
-   .news-featured-text p {
-     color: #4a6358;
-     font-size: 0.95rem;
-     line-height: 1.8;
-     margin-bottom: 1.5rem;
-   }
-   
-   .news-grid-section {
-     padding: 4rem 2.5rem;
-     background-color: #e6f2ea;
-   }
+   .news-featured-text h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1f3d2b; margin-bottom: 1rem; line-height: 1.3; }
+   .news-featured-text p  { color: #4a6358; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem; }
    
    .news-grid-section h2 {
      font-family: 'Playfair Display', serif;
@@ -812,93 +523,7 @@
      margin: 0 auto 2rem;
    }
    
-   .news-article-grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 1.8rem;
-     max-width: 1100px;
-     margin: 0 auto;
-   }
-   
-   .news-article-card {
-     background: white;
-     border-radius: 10px;
-     overflow: hidden;
-     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-     transition: transform 0.22s, box-shadow 0.22s;
-     text-decoration: none;
-     color: inherit;
-     display: block;
-   }
-   
-   .news-article-card:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-   }
-   
-   .news-article-img {
-     height: 190px;
-     background-color: #2a5c3f;
-     background-size: cover;
-     background-position: center;
-   }
-   
-   .news-article-body {
-     padding: 1.4rem 1.5rem 1.6rem;
-   }
-   
-   .news-tag {
-     display: inline-block;
-     font-size: 0.68rem;
-     font-weight: 700;
-     letter-spacing: 0.12em;
-     text-transform: uppercase;
-     color: #1f5d3a;
-     background: #e6f2ea;
-     border-radius: 4px;
-     padding: 0.2rem 0.6rem;
-     margin-bottom: 0.7rem;
-   }
-   
-   .news-article-body h3 {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.1rem;
-     margin-bottom: 0.5rem;
-     color: #1f3d2b;
-     line-height: 1.35;
-   }
-   
-   .news-article-body p {
-     font-size: 0.85rem;
-     color: #4a6358;
-     line-height: 1.6;
-   }
-   
-   .news-newsletter {
-     background-color: #1a3d28;
-     padding: 4rem 2rem;
-     text-align: center;
-     color: white;
-   }
-   
-   .news-newsletter h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2rem;
-     margin-bottom: 0.7rem;
-   }
-   
-   .news-newsletter p {
-     opacity: 0.78;
-     margin-bottom: 2rem;
-     font-size: 0.95rem;
-   }
-   
-   .newsletter-form {
-     display: flex;
-     gap: 0.8rem;
-     justify-content: center;
-     flex-wrap: wrap;
-   }
+   .newsletter-form { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
    
    .newsletter-form input {
      padding: 0.8rem 1.5rem;
@@ -911,33 +536,12 @@
      color: white;
    }
    
-   .newsletter-form input::placeholder { 
-    color: rgba(255,255,255,0.55); 
-   }
-
-   .newsletter-form input:focus { 
-    outline: none; 
-    border-color: #c9b37e; 
-   }
-   
-   .newsletter-form button {
-     padding: 0.8rem 2rem;
-     background: #c9b37e;
-     color: #1a2e1a;
-     border: none;
-     border-radius: 6px;
-     font-family: 'Open Sans', sans-serif;
-     font-weight: 700;
-     font-size: 0.9rem;
-     cursor: pointer;
-     transition: background 0.2s;
-   }
-   
-   .newsletter-form button:hover { background: #b39e63; }
+   .newsletter-form input::placeholder { color: rgba(255,255,255,0.55); }
+   .newsletter-form input:focus { outline: none; border-color: #c9b37e; }
    
    
    /* ============================================================
-      BANOR (banor.html) — ORÖRD
+      BANOR (banor.html)
       ============================================================ */
    
    .course-hero {
@@ -957,8 +561,7 @@
      content: "";
      position: absolute;
      inset: 0;
-     background: linear-gradient(
-       to bottom,
+     background: linear-gradient(to bottom,
        rgba(10,30,15,0.55) 0%,
        rgba(10,30,15,0.20) 40%,
        rgba(10,30,15,0.20) 60%,
@@ -971,9 +574,6 @@
      z-index: 1;
      color: white;
      text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-     background: none;
-     padding: 0;
-     border-radius: 0;
    }
    
    .course-hero h1 {
@@ -984,46 +584,17 @@
      margin-bottom: 0.5rem;
    }
    
-   .course-hero .subtitle {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.65rem;
-     font-weight: 400;
-     font-style: italic;
-     margin-bottom: 0.5rem;
-   }
-   
-   .course-hero .tagline {
-     display: block;
-     font-size: 1rem;
-     font-weight: 400;
-     opacity: 0.9;
-     letter-spacing: 0.02em;
-     margin-top: 0;
-   }
+   .course-hero .subtitle { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-style: italic; margin-bottom: 0.5rem; }
+   .course-hero .tagline  { display: block; font-size: 1rem; opacity: 0.9; letter-spacing: 0.02em; }
    
    .course-info {
      background-color: #f5f0e8;
-     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
      padding: 4rem 2rem 4.5rem;
    }
    
-   .course-info-header {
-     text-align: center;
-     margin-bottom: 3rem;
-   }
-   
-   .course-info-header h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2.4rem;
-     font-weight: 700;
-     color: #1f3d2b;
-     margin-bottom: 0.6rem;
-   }
-   
-   .course-info-header p {
-     font-size: 1rem;
-     color: #4a6358;
-   }
+   .course-info-header { text-align: center; margin-bottom: 3rem; }
+   .course-info-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: #1f3d2b; margin-bottom: 0.6rem; }
+   .course-info-header p  { font-size: 1rem; color: #4a6358; }
    
    .course-info-body {
      max-width: 1100px;
@@ -1034,17 +605,9 @@
      align-items: start;
    }
    
-   .course-features {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 1.8rem 2rem;
-   }
+   .course-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem 2rem; }
    
-   .feature-item {
-     display: flex;
-     flex-direction: column;
-     gap: 0.4rem;
-   }
+   .feature-item { display: flex; flex-direction: column; gap: 0.4rem; }
    
    .feature-icon-label {
      display: flex;
@@ -1056,16 +619,7 @@
      color: #1f3d2b;
    }
    
-   .feature-icon-label .icon {
-     font-size: 1.2rem;
-     opacity: 0.8;
-   }
-   
-   .feature-item p {
-     font-size: 0.88rem;
-     color: #4a6358;
-     line-height: 1.55;
-   }
+   .feature-item p { font-size: 0.88rem; color: #4a6358; line-height: 1.55; }
    
    .course-btn {
      display: inline-block;
@@ -1090,12 +644,7 @@
      height: 420px;
    }
    
-   .course-image-block img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     display: block;
-   }
+   .course-image-block img { width: 100%; height: 100%; object-fit: cover; display: block; }
    
    .img-placeholder {
      width: 100%;
@@ -1122,30 +671,12 @@
      position: relative;
    }
    
-   .holes-bg::before {
-     content: "";
-     position: absolute;
-     inset: 0;
-     background: rgba(10,28,18,0.55);
-   }
-   
+   .holes-bg::before { content: ""; position: absolute; inset: 0; background: rgba(10,28,18,0.55); }
    .holes-bg > * { position: relative; z-index: 1; }
    
-   .holes-header {
-     text-align: center;
-     margin-bottom: 2.5rem;
-     color: white;
-   }
-   
-   .holes-header h2 {
-     font-family: 'Playfair Display', serif;
-     font-size: 2.4rem;
-     font-weight: 700;
-     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-     margin-bottom: 0.5rem;
-   }
-   
-   .holes-header p { font-size: 0.95rem; opacity: 0.85; }
+   .holes-header { text-align: center; margin-bottom: 2.5rem; color: white; }
+   .holes-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.5); margin-bottom: 0.5rem; }
+   .holes-header p  { font-size: 0.95rem; opacity: 0.85; }
    
    .holes-grid {
      display: grid;
@@ -1169,20 +700,12 @@
    
    .hole-img {
      height: 220px;
-     background-image: url("/img/hole.jpg");
      background-size: cover;
      background-position: center;
+     background-color: #2a5c3f;
    }
    
-   .hole-card:nth-child(1) .hole-img {
-     background-image: url("/img/Skärmbild 2026-03-30 140419.jpg"), linear-gradient(160deg, #4a8c64, #1a4a2e);
-   }
-   .hole-card:nth-child(2) .hole-img {
-     background-image: url("/img/Skärmbild 2026-03-30 140430.jpg"), linear-gradient(160deg, #3d7a58, #1a3d2a);
-   }
-   .hole-card:nth-child(3) .hole-img {
-     background-image: url("/img/Skärmbild 2026-03-30 140443.jpg"), linear-gradient(160deg, #2d6040, #172e20);
-   }
+   /* Bilder sätts via inline style i HTML */
    
    .hole-overlay {
      position: absolute;
@@ -1192,27 +715,10 @@
      color: white;
    }
    
-   .hole-par-line {
-     display: flex;
-     align-items: center;
-     gap: 0.4rem;
-     font-size: 0.9rem;
-     font-weight: 600;
-     margin-bottom: 0.35rem;
-     opacity: 0.92;
-     letter-spacing: 0.02em;
-   }
-   
-   .hole-par-line .flag-icon { font-size: 1rem; }
+   .hole-par-line { display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem; opacity: 0.92; }
    .hole-par-line .dot { opacity: 0.5; margin: 0 0.2rem; }
    
-   .hole-name {
-     font-family: 'Playfair Display', serif;
-     font-size: 1.2rem;
-     font-weight: 700;
-     margin-bottom: 0.35rem;
-   }
-   
+   .hole-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; }
    .hole-desc { font-size: 0.8rem; opacity: 0.78; line-height: 1.45; }
    
    
@@ -1221,33 +727,29 @@
       ============================================================ */
    
    @media (max-width: 900px) {
-     .home-stats { grid-template-columns: repeat(2, 1fr); }
-     .home-intro { grid-template-columns: 1fr; }
-     .home-intro-image { min-height: 280px; }
-     .quicklinks-grid { grid-template-columns: 1fr 1fr; }
-     .news-strip-grid { grid-template-columns: 1fr 1fr; }
-     .plans-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-     .benefit-row { grid-template-columns: 1fr; }
+     .home-stats, .card-grid, .news-strip-grid, .quicklinks-grid { grid-template-columns: repeat(2, 1fr); }
+     .home-intro         { grid-template-columns: 1fr; }
+     .home-intro-image   { min-height: 280px; }
+     .plans-grid         { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+     .benefit-row        { grid-template-columns: 1fr; }
      .benefit-row.reverse { direction: ltr; }
      .news-featured-inner { grid-template-columns: 1fr; }
-     .news-featured-img { height: 260px; }
-     .news-article-grid { grid-template-columns: 1fr 1fr; }
-     .course-info-body { grid-template-columns: 1fr; }
+     .news-featured-img  { height: 260px; }
+     .course-info-body   { grid-template-columns: 1fr; }
      .course-image-block { height: 280px; order: -1; }
-     .holes-grid { grid-template-columns: 1fr; }
-     .course-hero h1 { font-size: 2.5rem; }
+     .holes-grid         { grid-template-columns: 1fr; }
+     .course-hero h1     { font-size: 2.5rem; }
      .course-hero .subtitle { font-size: 1.2rem; }
    }
    
    @media (max-width: 600px) {
-     .home-hero-content { padding: 0 1.5rem 3.5rem; }
+     .home-hero-content  { padding: 0 1.5rem 3.5rem; }
      .home-hero-content h1 { font-size: 2.6rem; }
-     .quicklinks-grid { grid-template-columns: 1fr; }
-     .news-strip-grid { grid-template-columns: 1fr; }
-     .news-article-grid { grid-template-columns: 1fr; }
+     .home-intro-text    { padding: 3rem 1.8rem; }
+     .card-grid, .quicklinks-grid, .news-strip-grid { grid-template-columns: 1fr; }
+     .home-stats         { grid-template-columns: repeat(2, 1fr); }
      .member-hero-content h1 { font-size: 2.2rem; }
-     .course-features { grid-template-columns: 1fr; }
-     .logo { font-size: 1.1rem; }
-     .nav a { padding: 0.3rem 0.5rem; font-size: 0.82rem; }
-     .home-intro-text { padding: 3rem 1.8rem; }
+     .course-features    { grid-template-columns: 1fr; }
+     .logo               { font-size: 1.1rem; }
+     .nav a              { padding: 0.3rem 0.5rem; font-size: 0.82rem; }
    }
