@@ -50,8 +50,7 @@ body {
   background: #c9b37e;
   color: #1a2e1a;
 }
-.btn-primary:hover,
-.btn-gold:hover {
+.btn-primary:hover, .btn-gold:hover {
   background: #b39e63;
   transform: translateY(-2px);
 }
@@ -174,7 +173,7 @@ body {
 .news-date {
   display: block;
   font-size: 0.78rem;
-  color: #8a9e6e;
+  color: #455d22;
   margin-bottom: 0.5rem;
 }
 .news-strip-tag {
@@ -904,6 +903,10 @@ body {
   font-size: 0.95rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.news-featured-eyebrow  {
+  color: #534013;
 }
 
 .news-grid-section {
