@@ -45,7 +45,7 @@
   </div>
 </section>
 
-<section class="course-info">
+<main class="course-info">
   <div class="course-info-header">
     <h2>Om Golfbanan</h2>
     <p>En hel golfrunda i Ale's natursköna landskap väntar!</p>
@@ -96,7 +96,7 @@
   </div>
 
   <div class="divider">✦ ✦ ✦</div>
-</section>
+</main>
 
 <section class="holes-bg" id="holes-grid">
   <div class="holes-header">
@@ -107,7 +107,7 @@
   <div class="holes-grid">
 
     <div class="hole-card">
-      <div class="hole-img" style="background-image: url('/img/9d8220f3-visby-hål-6.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="hole-img" style="background-image: url('/img/golfbanor.webp'); background-size: cover; background-position: center;"></div>
       <div class="hole-overlay">
         <div class="hole-par-line">
           <span>⛳</span>
@@ -153,7 +153,7 @@
 
 <footer class="footer">
   <div>
-    <h4>Kontakt</h4>
+    <h3>Kontakt</h3>
     <p>Ale Golfklubb<br>Alevägen 120, Älvängen<br>Tel: 000-123 456</p>
   </div>
   <div>
@@ -166,20 +166,7 @@
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const overlay = document.getElementById('menuOverlay');
-
-  function toggleMenu() {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    overlay.classList.toggle('open');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

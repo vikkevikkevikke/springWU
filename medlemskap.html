@@ -49,13 +49,13 @@
   <p>Som medlem i Ale Golfklubb får du obegränsat spel på vår natursköna 18-hålsbana, tillgång till träningsfaciliteter, tävlingar och ett varmt socialt sammanhang. Vi är en inkluderande klubb med hjärtat på rätt ställe.</p>
 </section>
 
-<section class="member-plans" id="planer">
+<main class="member-plans" id="planer">
   <h2>Välj din plan</h2>
   <div class="plans-grid">
 
     <div class="plan-card">
       <h1>🏌️</h1>
-      <h3>Junior</h3>
+      <h2>Junior</h2>
       <p class="plan-desc">För spelare upp till 21 år. Perfekt start på golfkarriären.</p>
       <div class="plan-price">1 500 <span>kr / år</span></div>
       <ul>
@@ -68,9 +68,9 @@
     </div>
 
     <div class="plan-card featured">
-      <h4>Populärast</h4>
+      <h3>Populärast</h3>
       <h1>⛳</h1>
-      <h3>Senior</h3>
+      <h2>Senior</h2>
       <p class="plan-desc">Vårt mest populära alternativ för den aktive golfare.</p>
       <div class="plan-price">4 500 <span>kr / år</span></div>
       <ul>
@@ -85,7 +85,7 @@
 
     <div class="plan-card">
       <h1>👨‍👩‍👧</h1>
-      <h3>Familj</h3>
+      <h2>Familj</h2>
       <p class="plan-desc">2 vuxna + barn under 18 år. Golf för hela familjen.</p>
       <div class="plan-price">7 500 <span>kr / år</span></div>
       <ul>
@@ -98,7 +98,7 @@
     </div>
 
   </div>
-</section>
+</main>
 
 <section class="member-benefits">
   <h2>Vad ingår i ditt medlemskap?</h2>
@@ -127,7 +127,7 @@
       <h3>Tävlingar & gemenskap</h3>
       <p>Delta i klubbens tävlingar, sällskapsspel och sociala evenemang under hela säsongen. Golfsporten handlar lika mycket om gemenskap som om spelet, och vi välkomnar alla.</p>
     </div>
-    <div class="benefit-img" style="background-image: url('/img/gettyimages-121322044-1024x576.jpg');"></div>
+    <div class="benefit-img" style="background-image: url('/img/9d8220f3-visby-hal-6.jpg');"></div>
   </div>
 </section>
 
@@ -139,7 +139,7 @@
 
 <footer class="footer">
   <div>
-    <h4>Kontakt</h4>
+    <h3>Kontakt</h3>
     <p>Ale Golfklubb<br>Alevägen 120, Älvängen<br>Tel: 000-123 456</p>
   </div>
   <div>
@@ -152,20 +152,7 @@
   </div>
 </footer>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const overlay = document.getElementById('menuOverlay');
-
-  function toggleMenu() {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    overlay.classList.toggle('open');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
