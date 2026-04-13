@@ -6,10 +6,10 @@
   <title>Nyheter - Ale Golfklubb</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">ALE GOLFKLUBB</div>
   <nav class="nav">
@@ -19,9 +19,22 @@
     <a href="nyheter.html" class="active">Nyheter</a>
     <a href="#">Kontakt</a>
   </nav>
+  <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-<!-- HERO -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Hem</a>
+  <a href="banor.html">Banan</a>
+  <a href="medlemskap.html">Medlemskap</a>
+  <a href="nyheter.html" class="active">Nyheter</a>
+  <a href="#">Kontakt</a>
+</nav>
+
 <section class="news-hero">
   <div class="news-hero-content">
     <span class="eyebrow">Ale Golfklubb</span>
@@ -29,32 +42,26 @@
   </div>
 </section>
 
-<!-- FEATURED ARTICLE -->
 <section class="news-featured">
   <div class="news-featured-inner">
-
     <div class="news-featured-img"></div>
-
     <div class="news-featured-text">
       <span class="eyebrow">Huvudnyhet</span>
       <h2>Banan öppen från 1 april – säsongen är igång!</h2>
       <span class="news-date">28 mars 2026</span>
       <p>Efter en lång vinter är äntligen banan öppen för spel. Greenerna är i utmärkt skick och greenkeepingteamet har jobbat hårt under vintern för att förbereda en fantastisk säsong.</p>
       <p>Starttider kan bokas via vår hemsida eller direkt i receptionen. Välkommen ut på banan!</p>
-      <a href="#" class="btn-green">Läs hela artikeln →</a>
+      <a href="banor.html" class="btn-green">Läs mer om banan →</a>
     </div>
-
   </div>
 </section>
 
-<!-- ARTICLE GRID -->
 <section class="news-grid-section">
   <h2>Senaste nyheterna</h2>
-
   <div class="news-article-grid">
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #2a5c3f;"></div>
+      <div class="news-article-img" style="background-image: url('/img/banner-img1.png');"></div>
       <div class="news-article-body">
         <span class="news-tag">Tävling</span>
         <span class="news-date">20 mars 2026</span>
@@ -64,7 +71,7 @@
     </a>
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #1a4a2e;"></div>
+      <div class="news-article-img" style="background-image: url('/img/golfbanor.webp');"></div>
       <div class="news-article-body">
         <span class="news-tag">Kurs</span>
         <span class="news-date">15 mars 2026</span>
@@ -74,7 +81,7 @@
     </a>
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #3a6845;"></div>
+      <div class="news-article-img" style="background-image: url('/img/gettyimages-121322044-1024x576.jpg');"></div>
       <div class="news-article-body">
         <span class="news-tag">Klubbinfo</span>
         <span class="news-date">10 mars 2026</span>
@@ -84,7 +91,7 @@
     </a>
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #244d35;"></div>
+      <div class="news-article-img" style="background-image: url('/img/0wGZls3xH3g-mYkhtq8e9qAISXJ0-REGULAR.jpg');"></div>
       <div class="news-article-body">
         <span class="news-tag">Träning</span>
         <span class="news-date">5 mars 2026</span>
@@ -94,7 +101,7 @@
     </a>
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #1e4530;"></div>
+      <div class="news-article-img" style="background-image: url('img/Miljöbild-restaurang-3.jpg');"></div>
       <div class="news-article-body">
         <span class="news-tag">Event</span>
         <span class="news-date">28 februari 2026</span>
@@ -104,7 +111,7 @@
     </a>
 
     <a href="#" class="news-article-card">
-      <div class="news-article-img" style="background-color: #2d5e3f;"></div>
+      <div class="news-article-img" style="background-image: url('/img/9748_1620734278.233.webp');"></div>
       <div class="news-article-body">
         <span class="news-tag">Banan</span>
         <span class="news-date">15 februari 2026</span>
@@ -112,11 +119,9 @@
         <p>Under vintern renoveras bunkern på hål 7 för att förbättra spelupplevelsen. Arbetet beräknas vara klart till säsongsstarten.</p>
       </div>
     </a>
-
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section class="news-newsletter">
   <h2>Håll dig uppdaterad</h2>
   <p>Prenumerera på vårt nyhetsbrev och missa aldrig en tävling eller ett evenemang.</p>
@@ -126,13 +131,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div>
     <h4>Kontakt</h4>
-    <p>Ale Golfklubb<br>
-       Alevägen 120, Älvängen<br>
-       Tel: 000-123 456</p>
+    <p>Ale Golfklubb<br>Alevägen 120, Älvängen<br>Tel: 000-123 456</p>
   </div>
   <div>
     <h4>Följ oss</h4>
@@ -140,10 +142,24 @@
   </div>
   <div>
     <h4>Öppettider</h4>
-    <p>Mån–Fre: 08:00–18:00<br>
-       Lör–Sön: 08:00–17:00</p>
+    <p>Mån–Fre: 08:00–18:00<br>Lör–Sön: 08:00–17:00</p>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    overlay.classList.toggle('open');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+</script>
 
 </body>
 </html>

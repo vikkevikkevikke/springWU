@@ -8,22 +8,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">ALE GOLFKLUBB</div>
   <nav class="nav">
     <a href="index.html">Hem</a>
-    <a href="banor.html">Banan</a>
+    <a href="banor.html" class="active">Banan</a>
     <a href="medlemskap.html">Medlemskap</a>
     <a href="nyheter.html">Nyheter</a>
     <a href="#">Kontakt</a>
   </nav>
+  <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-<!-- HERO -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Hem</a>
+  <a href="banor.html" class="active">Banan</a>
+  <a href="medlemskap.html">Medlemskap</a>
+  <a href="nyheter.html">Nyheter</a>
+  <a href="#">Kontakt</a>
+</nav>
+
 <section class="course-hero">
   <div class="hero-content">
     <h1>Banan</h1>
@@ -32,7 +45,6 @@
   </div>
 </section>
 
-<!-- OM GOLFBANAN -->
 <section class="course-info">
   <div class="course-info-header">
     <h2>Om Golfbanan</h2>
@@ -40,62 +52,53 @@
   </div>
 
   <div class="course-info-body">
-
-    <!-- Vänster: features + knapp -->
     <div>
       <div class="course-features">
         <div class="feature-item">
           <div class="feature-icon-label">
-            <span class="icon">📋</span>
+            <span>📋</span>
             <span>18 Hål</span>
           </div>
           <p>En omväxlande bana med utmanande och roliga hål.</p>
         </div>
-
         <div class="feature-item">
           <div class="feature-icon-label">
-            <span class="icon">🏔️</span>
+            <span>🏔️</span>
             <span>Naturskönt</span>
           </div>
           <p>Vackra vyer med skogar, sjöar och böljande landskap.</p>
         </div>
-
         <div class="feature-item">
           <div class="feature-icon-label">
-            <span class="icon">⛳</span>
+            <span>⛳</span>
             <span>Faciliteter</span>
           </div>
           <p>Driving range, övningsområde, klubbhus och restaurang.</p>
         </div>
-
         <div class="feature-item">
           <div class="feature-icon-label">
-            <span class="icon">🏌️</span>
+            <span>🏌️</span>
             <span>Pro Shop</span>
           </div>
-          <p>Driving range, övningsområde, klubbhus och restaurang.</p>
+          <p>Brett sortiment av utrustning och kläder för alla nivåer.</p>
         </div>
       </div>
-
       <div style="margin-top: 2rem;">
-        <a href="#" class="course-btn">Se banöversikt</a>
+        <a href="#holes-grid" class="course-btn">Se banöversikt</a>
       </div>
     </div>
 
-    <!-- Höger: stor bild -->
     <div class="course-image-block">
       <img src="/img/Lysegardens_GK_1.jpg" alt="Golfbana vy"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
       <div class="img-placeholder"></div>
     </div>
-
   </div>
 
-  <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+  <div class="divider">✦ ✦ ✦</div>
 </section>
 
-<!-- FAVORITHÅL -->
-<section class="holes-bg">
+<section class="holes-bg" id="holes-grid">
   <div class="holes-header">
     <h2>Våra Favorithål</h2>
     <p>Se de bästa hålen på vår natursköna golfbana!</p>
@@ -104,10 +107,10 @@
   <div class="holes-grid">
 
     <div class="hole-card">
-      <div class="hole-img"></div>
+      <div class="hole-img" style="background-image: url('/img/9d8220f3-visby-hål-6.jpg'); background-size: cover; background-position: center;"></div>
       <div class="hole-overlay">
         <div class="hole-par-line">
-          <span class="flag-icon">⛳</span>
+          <span>⛳</span>
           <span>Par 5</span>
           <span class="dot">·</span>
           <span>496 m</span>
@@ -118,10 +121,10 @@
     </div>
 
     <div class="hole-card">
-      <div class="hole-img"></div>
+      <div class="hole-img" style="background-image: url('/img/109_Hills_GC.jpg'); background-size: cover; background-position: center;"></div>
       <div class="hole-overlay">
         <div class="hole-par-line">
-          <span class="flag-icon">⛳</span>
+          <span>⛳</span>
           <span>Par 3</span>
           <span class="dot">·</span>
           <span>158 m</span>
@@ -132,10 +135,10 @@
     </div>
 
     <div class="hole-card">
-      <div class="hole-img"></div>
+      <div class="hole-img" style="background-image: url('/img/Sawgrass_17.jpg'); background-size: cover; background-position: center;"></div>
       <div class="hole-overlay">
         <div class="hole-par-line">
-          <span class="flag-icon">⛳</span>
+          <span>⛳</span>
           <span>Par 4</span>
           <span class="dot">·</span>
           <span>365 m</span>
@@ -148,13 +151,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div>
     <h4>Kontakt</h4>
-    <p>Ale Golfklubb</p>
-    <p>Alevägen 120, Älvängen</p>
-    <p>Tel: 000-123 456</p>
+    <p>Ale Golfklubb<br>Alevägen 120, Älvängen<br>Tel: 000-123 456</p>
   </div>
   <div>
     <h4>Följ oss</h4>
@@ -162,10 +162,24 @@
   </div>
   <div>
     <h4>Öppettider</h4>
-    <p>Mån–Fre: 08:00–18:00</p>
-    <p>Lör–Sön: 08:00–17:00</p>
+    <p>Mån–Fre: 08:00–18:00<br>Lör–Sön: 08:00–17:00</p>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    overlay.classList.toggle('open');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+</script>
 
 </body>
 </html>

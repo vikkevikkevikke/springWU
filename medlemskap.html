@@ -6,10 +6,10 @@
   <title>Medlemskap - Ale Golfklubb</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">ALE GOLFKLUBB</div>
   <nav class="nav">
@@ -19,9 +19,22 @@
     <a href="nyheter.html">Nyheter</a>
     <a href="#">Kontakt</a>
   </nav>
+  <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-<!-- HERO -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Hem</a>
+  <a href="banor.html">Banan</a>
+  <a href="medlemskap.html" class="active">Medlemskap</a>
+  <a href="nyheter.html">Nyheter</a>
+  <a href="#">Kontakt</a>
+</nav>
+
 <section class="member-hero">
   <div class="member-hero-content">
     <span class="eyebrow">Bli en del av gemenskapen</span>
@@ -31,16 +44,13 @@
   </div>
 </section>
 
-<!-- INTRO -->
 <section class="member-intro">
   <h2>Varför bli medlem?</h2>
   <p>Som medlem i Ale Golfklubb får du obegränsat spel på vår natursköna 18-hålsbana, tillgång till träningsfaciliteter, tävlingar och ett varmt socialt sammanhang. Vi är en inkluderande klubb med hjärtat på rätt ställe.</p>
 </section>
 
-<!-- PLANS -->
 <section class="member-plans" id="planer">
   <h2>Välj din plan</h2>
-
   <div class="plans-grid">
 
     <div class="plan-card">
@@ -54,7 +64,7 @@
         <li>Rabatterade green fees</li>
         <li>Tillgång till driving range</li>
       </ul>
-      <a class="btn-plan">Välj Junior</a>
+      <a href="#" class="btn-plan">Välj Junior</a>
     </div>
 
     <div class="plan-card featured">
@@ -70,7 +80,7 @@
         <li>Handikapregistrering</li>
         <li>Prioriterad bokning</li>
       </ul>
-      <a class="btn-plan">Välj Senior</a>
+      <a href="#" class="btn-plan">Välj Senior</a>
     </div>
 
     <div class="plan-card">
@@ -84,13 +94,12 @@
         <li>Juniorträning ingår</li>
         <li>Gemensam bokning</li>
       </ul>
-      <a class="btn-plan">Välj Familj</a>
+      <a href="#" class="btn-plan">Välj Familj</a>
     </div>
 
   </div>
 </section>
 
-<!-- BENEFITS — alternating rows -->
 <section class="member-benefits">
   <h2>Vad ingår i ditt medlemskap?</h2>
 
@@ -107,9 +116,9 @@
     <div class="benefit-text">
       <div class="benefit-icon-large">🎯</div>
       <h3>Träning & faciliteter</h3>
-      <p>Förbättra ditt spel på vår driving range och övningsområde. Erfarena tränare finns tillgängliga för lektioner och klinics för alla nivåer – från nybörjare till scratch-spelare.</p>
+      <p>Förbättra ditt spel på vår driving range och övningsområde. Erfarna tränare finns tillgängliga för lektioner och klinics för alla nivåer – från nybörjare till scratch-spelare.</p>
     </div>
-    <div class="benefit-img" style="background-color: #2a5c3f;"></div>
+    <div class="benefit-img" style="background-image: url('/img/thumbnail_IMG_4904-1030x773.jpg');"></div>
   </div>
 
   <div class="benefit-row">
@@ -118,25 +127,20 @@
       <h3>Tävlingar & gemenskap</h3>
       <p>Delta i klubbens tävlingar, sällskapsspel och sociala evenemang under hela säsongen. Golfsporten handlar lika mycket om gemenskap som om spelet, och vi välkomnar alla.</p>
     </div>
-    <div class="benefit-img" style="background-color: #1a4a2e;"></div>
+    <div class="benefit-img" style="background-image: url('/img/gettyimages-121322044-1024x576.jpg');"></div>
   </div>
-
 </section>
 
-<!-- CTA -->
 <section class="member-cta">
   <h2>Redo att bli medlem?</h2>
   <p>Ansök om medlemskap idag och börja spela golf i vår vackra naturmiljö.</p>
-  <a class="btn-primary">Ansök Nu</a>
+  <button type="button">Ansök Nu</button>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div>
     <h4>Kontakt</h4>
-    <p>Ale Golfklubb<br>
-       Alevägen 120, Älvängen<br>
-       Tel: 000-123 456</p>
+    <p>Ale Golfklubb<br>Alevägen 120, Älvängen<br>Tel: 000-123 456</p>
   </div>
   <div>
     <h4>Följ oss</h4>
@@ -144,10 +148,24 @@
   </div>
   <div>
     <h4>Öppettider</h4>
-    <p>Mån–Fre: 08:00–18:00<br>
-       Lör–Sön: 08:00–17:00</p>
+    <p>Mån–Fre: 08:00–18:00<br>Lör–Sön: 08:00–17:00</p>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    overlay.classList.toggle('open');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+</script>
 
 </body>
 </html>

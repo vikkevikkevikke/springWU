@@ -1,0 +1,93 @@
+/* ── RESPONSIV ───────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .home-stats,
+    .card-grid,
+    .news-strip-grid,
+    .quicklinks-grid,
+    .news-article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .home-intro {
+      grid-template-columns: 1fr;
+    }
+    .home-intro-image {
+      min-height: 280px;
+    }
+    .plans-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-inline: auto;
+    }
+    .benefit-row {
+      grid-template-columns: 1fr;
+    }
+    .benefit-row.reverse {
+      direction: ltr;
+    }
+    .news-featured-inner {
+      grid-template-columns: 1fr;
+    }
+    .news-featured-img {
+      height: 260px;
+    }
+    .course-info-body {
+      grid-template-columns: 1fr;
+    }
+    .course-image-block {
+      height: 280px;
+      order: -1;
+    }
+    .holes-grid {
+      grid-template-columns: 1fr;
+    }
+    .course-hero h1 {
+      font-size: 2.5rem;
+    }
+    .course-hero .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home-hero-content {
+      padding: 0 1.5rem 3.5rem;
+    }
+    .home-hero-content h1 {
+      font-size: 2.6rem;
+    }
+    .home-intro-text {
+      padding: 3rem 1.8rem;
+    }
+    .card-grid,
+    .quicklinks-grid,
+    .news-strip-grid,
+    .news-article-grid {
+      grid-template-columns: 1fr;
+    }
+    .home-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .member-hero-content h1 {
+      font-size: 2.2rem;
+    }
+    .course-features {
+      grid-template-columns: 1fr;
+    }
+    .logo {
+      font-size: 1.1rem;
+    }
+    .nav a {
+      padding: 0.3rem 0.5rem;
+      font-size: 0.82rem;
+    }
+  }
